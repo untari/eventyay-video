@@ -40,7 +40,7 @@ import UploadUrlInput from 'components/UploadUrlInput'
 import mixin from './mixin'
 import SidebarAddons from './SidebarAddons'
 import {youtubeid} from 'lib/validators'
-import ISO6391 from 'iso-639-1';
+import ISO6391 from 'iso-639-1'
 
 const STREAM_SOURCE_OPTIONS = [
 	{ id: 'hls', label: 'HLS', module: 'livestream.native' },
@@ -99,7 +99,6 @@ export default {
 		},
 		loop: {
 			get () {
-
 				return !!this.modules['livestream.youtube'].config.loop
 			},
 			set (value) {
@@ -203,11 +202,11 @@ export default {
 				this.modules['livestream.native'].config.alternatives = undefined
 			}
 		},
-		getLanguageOptions() {
+		getLanguageOptions () {
 			return ISO6391.getAllCodes().map(code => ({
 				id: ISO6391.getName(code),
 				label: ISO6391.getName(code),
-			}));
+			}))
 		}
 	}
 }
